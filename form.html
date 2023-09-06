@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan System</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.2/css/bulma.min.css">
+</head>
+<body class="">
+    <div class="container mt-5 ">
+        <h1 class="title">Sistema de préstamos</h1>
+
+        <!-- Loan Form -->
+        <div class="box has-background-info-light">
+            <h2 class="subtitle">Formulario de préstamos</h2>
+            <form id="loanForm">
+                <div class="field">
+                    <label class="label">Solicitante</label>
+                    <div class="control">
+                        <input class="input" type="text" id="borrowerName" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Prestador</label>
+                    <div class="control">
+                        <input class="input" type="text" id="lenderName" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Fecha</label>
+                    <div class="control">
+                        <input class="input" type="date" id="loanDate" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Motivo / Proyecto</label>
+                    <div class="control">
+                        <input class="input" type="text" id="loanReason" required>
+                    </div>
+                </div>
+                <div class="field">
+                    <label class="label">Objeto(s)</label>
+                    <div class="control">
+                        <textarea class="textarea" id="borrowedItems" required></textarea>
+                    </div>
+                </div>
+                <div class="field">
+                    <div class="control">
+                        <button class="button is-info" type="submit">Agregar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- Loan Table -->
+        <div class="box has-background-link-light">
+            <h2 class="subtitle">Tabla de registros</h2>
+            <table class="table is-fullwidth">
+                <thead>
+                    <tr>
+                        <th>Solicitante</th>
+                        <th>Prestador</th>
+                        <th>Fecha</th>
+                        <th>Motivo/Proyecto</th>
+                        <th>Objeto(s)</th>
+                    </tr>
+                </thead>
+                <tbody id="loanTable">
+                    <!-- Loan data will be added here dynamically -->
+                </tbody>
+            </table>
+        </div>
+    </div>
+
+    <script src="form.js"></script>
+</body>
+</html>
